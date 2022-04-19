@@ -1,0 +1,29 @@
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-923871-10', 'auto');
+
+  ga('set', 'dimension14', boContextData.language);
+  ga('set', 'dimension15', boContextData.section); {# Section (menu name) #}
+  ga('set', 'dimension16', boContextData.date); {# Trip date #}
+  ga('set', 'dimension17', boContextData.daysInAdvance); {# Search days in advance (Trip date and search date difference in days) #}
+{% if base.originObj %}
+  ga('set', 'dimension6', '{{ base.originObj.htmlFullName }}');
+{% endif %}{% if base.destinationObj %}
+  ga('set', 'dimension7', '{{ base.destinationObj.htmlFullName }}');
+{% endif %}{% if base.routeDistance %}
+  ga('set', 'dimension8', boContextData.routeDistance);
+  ga('set', 'dimension9', boContextData.routeDistanceRange);
+{% endif %}{% if base.ABTestToken %}
+  ga('set', 'dimension18', boContextData.ABTestToken);
+{% endif %}{% if base.menuName == base.constants.MenuNames.BookingRedirect %}
+  ga('set', 'dimension1', boContextData.bookingPartnerId);
+  ga('set', 'dimension5', boContextData.bookingClickSource); {# Booking button click source (ie. normal, estrangeiro) #}
+  ga('set', 'dimension4', boContextData.bookingBusCompanyId);
+  ga('set', 'dimension19', boContextData.bookingRedirectType); {# Booking redirect type (ie. undefined, timetablePage, seatsPage) #}
+{% endif %}
+  ga('send', 'pageview', location.pathname + location.search + location.hash);
+</script>

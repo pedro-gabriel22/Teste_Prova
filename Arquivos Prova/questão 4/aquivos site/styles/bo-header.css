@@ -1,0 +1,10 @@
+div.bo-header {
+  padding-top: 20px;
+  margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  div.bo-header img.bo-logo {
+    height: 60px;
+    margin-top: 30px;
+  }
+}

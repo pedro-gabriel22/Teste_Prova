@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <sitemap>
+      <loc>http://www.buscaonibus.com.br/sitemap-pt.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>http://www.buscaonibus.com.br/sitemap-pt-destinations.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>http://www.buscaonibus.com.br/sitemap-pt-bus-stations.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>http://www.buscaonibus.com.br/sitemap-pt-bus-companies.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>http://www.buscaonibus.com.br/sitemap-pt-events.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>http://www.buscaonibus.com.br/sitemap-en.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>http://www.buscaonibus.com.br/sitemap-en-destinations.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>http://www.buscaonibus.com.br/sitemap-en-bus-stations.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>http://www.buscaonibus.com.br/sitemap-en-bus-companies.xml</loc>
+   </sitemap>
+   <sitemap>
+      <loc>http://www.buscaonibus.com.br/sitemap-en-events.xml</loc>
+   </sitemap>   
+{% for city in cityList %}{% if city.destinationCount > 0 %}
+	<sitemap>
+		<loc>http://www.buscaonibus.com.br/sitemap-pt-timetable-{{ city.linkName }}.xml</loc>
+	</sitemap>{% endif %}{% endfor %}
+{% for city in cityList %}{% if city.destinationCount > 0 %}
+	<sitemap>
+		<loc>http://www.buscaonibus.com.br/sitemap-en-timetable-{{ city.linkName }}.xml</loc>
+	</sitemap>{% endif %}{% endfor %}
+</sitemapindex>

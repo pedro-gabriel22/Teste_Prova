@@ -1,0 +1,28 @@
+.navbar {
+  padding-right: 10px;
+  padding-left: 10px;
+}
+.navbar .nav li {
+  border-bottom: none;
+  line-height: 20px;
+}
+.navbar .nav > li > a {
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+.navbar .nav > li > a:hover,
+.navbar .nav > li > a:focus {
+  background-color: transparent;
+}
+@media (max-width: 767px) {
+  .bo-navbar-main {
+    margin-top: 0px;
+    min-height: 40px;
+  }
+  .bo-navbar-main .navbar-nav {
+    margin: 0px;
+  }
+  .bo-navbar-main .navbar-collapse > ul > li > a {
+    margin-right: 0px;
+  }
+}

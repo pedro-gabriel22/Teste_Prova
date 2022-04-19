@@ -1,0 +1,31 @@
+{% extends "basePage.html" %}
+{% block content %}
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3 col-sm-12 pull-right">
+{% include "includeShareButtons.html" %}
+			</div>
+			<div class="col-md-9 col-sm-12 pull-left">
+{% include "includeSearchHorizontal.html" %}
+{% include "includeHowItWorks.html" %}
+{{ incCityRouteList|safe }}
+{% include "includeAdMidContent.html" %}
+{{ incEventList|safe }}
+			</div>
+			<div class="col-md-3 col-sm-12 pull-left">
+{% include "includeAdRightColumn.html" %}
+			</div>
+			<div class="col-md-3 col-sm-4 pull-left">
+{% include "includeGooglePlayInstall.html" %}
+{% include "includeNewsletterSubscribe.html" %}
+			</div>			
+			<div class="col-md-3 col-sm-4 col-xs-12 pull-right">
+{% include "includeSocialPlugins.html" %}
+		    </div>
+			<div class="col-md-3 col-xs-12 pull-left">
+{% include "includeAdRightColumnScroll.html" %}
+			</div>
+		</div>
+	</div>
+{% include "includeContentBusTicketsArticle.html" %}
+{% endblock %}

@@ -1,0 +1,86 @@
+	<input id="language" type="hidden" value="{{ base.language }}"/>
+	<div class="navbar navbar-static-top bo-navbar-top hidden-xs">
+		<ul class="nav nav-pills pull-right">
+			<li{% if base.linkPt|slugify == base.constants.Institutional.BusTickets.links.pt %} class="active"{% endif %}>
+				<a href="{{ base.siteUrl }}/#passagens-de-onibus" class="bo-anchor-scroll">Passagens de Ônibus</a> 
+			</li>
+			<li{% if base.linkPt|slugify == base.constants.Institutional.FAQ.links.pt %} class="active"{% endif %}>
+				<a href="{{ base.siteUrl }}/perguntas-frequentes">Perguntas Frequentes</a> 
+			</li>
+			<li{% if base.linkPt|slugify == base.constants.Institutional.AboutUs.links.pt %} class="active"{% endif %}>
+				<a href="{{ base.siteUrl }}/sobre-nos">Sobre Nós</a> 
+			</li>
+			<li{% if base.linkPt|slugify == base.constants.Institutional.Careers.links.pt %} class="active"{% endif %}>
+				<a href="{{ base.siteUrl }}/trabalhe-conosco">Trabalhe Conosco</a> 
+			</li>
+		</ul>
+	</div>
+ 	<div class="bo-header">
+		<div class="container">
+	    	<div class="row">
+				<div class="col-sm-4 bo-logo">
+					<a href="{{ base.siteUrl }}" class="bo-link bo-logo" title="Busca Ônibus - Horários e passagens de ônibus"><img class="bo-logo" src="/site2013/img/logo-buscaonibus.png" alt="Busca Ônibus - Horários e passagens de ônibus" height="90px"/></a>
+				</div>
+				<div class="col-sm-8 hidden-xs">
+{% include "includeAdTop.html" %}
+				</div>
+			</div>
+		</div>
+		<div class="navbar navbar-default bo-navbar-main">
+			<div class="container">
+				<ul class="row nav navbar-nav pull-right bo-nav-language">
+					<li class="col-xs-6 active">
+						<a>PT</a> 
+					</li>
+					<li class="col-xs-6">
+{% if not base.linkEn == None %}
+						<a href="{{ base.siteUrl }}{{ base.linkEn }}">EN</a> 
+{% endif %}
+					</li>
+				</ul>
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+				</div>
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+						<li {% if base.menuName == base.constants.MenuNames.Home or base.menuName == base.constants.MenuNames.Timetable %} class="active" {% endif %}>
+							<a href="{{ base.siteUrl }}">Horários</a>
+						</li>
+						<li {% if base.menuName == base.constants.MenuNames.Destinations %} class="active" {% endif %}>
+							<a href="{{ base.siteUrl }}/destinos">Destinos</a> 
+						</li>
+						<li {% if base.menuName == base.constants.MenuNames.BusStations %} class="active" {% endif %}>
+							<a href="{{ base.siteUrl }}/rodoviarias">Rodoviárias</a> 
+						</li>
+						<li {% if base.menuName == base.constants.MenuNames.BusCompanies %} class="active" {% endif %}>
+							<a href="{{ base.siteUrl }}/viacoes">Viações</a> 
+						</li>				
+						<li {% if base.menuName == base.constants.MenuNames.Events %} class="active" {% endif %}>
+							<a href="{{ base.siteUrl }}/eventos">Eventos</a> 
+						</li>
+						<li>
+							<a href="http://blog.buscaonibus.com.br">Blog</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav visible-xs">
+						<li{% if base.linkPt|slugify == base.constants.Institutional.BusTickets.links.pt %} class="active"{% endif %}>
+							<a href="{{ base.siteUrl }}/#passagens-de-onibus" class="bo-anchor-scroll">Passagens de Ônibus</a> 
+						</li>
+						<li{% if base.linkPt|slugify == base.constants.Institutional.FAQ.links.pt %} class="active"{% endif %}>
+							<a href="{{ base.siteUrl }}/perguntas-frequentes">Perguntas Frequentes</a> 
+						</li>
+						<li{% if base.linkPt|slugify == base.constants.Institutional.AboutUs.links.pt %} class="active"{% endif %}>
+							<a href="{{ base.siteUrl }}/sobre-nos">Sobre Nós</a> 
+						</li>
+						<li{% if base.linkPt|slugify == base.constants.Institutional.Careers.links.pt %} class="active"{% endif %}>
+							<a href="{{ base.siteUrl }}/trabalhe-conosco">Trabalhe Conosco</a> 
+						</li>						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>

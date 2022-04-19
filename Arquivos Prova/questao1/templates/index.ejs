@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="content-language" content="pt" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+	<title>CMS</title>
+
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<nav class="navbar" role="navigation">
+		<div class="navbar-header">
+			<a class="navbar-brand" href="/cms">CMS</a>
+		</div>
+	</nav>
+
+	<div class="container">
+
+		<div class="container-children-input">
+
+			<div>
+				<input type="text" class="form-control" id="bo_city_handler_nameFilter" placeholder="Filtrar pelo Nome"
+					autofocus>
+			</div>
+
+		</div>
+
+		<div class="container-children-list">
+			<div class="all_list">
+
+				<% for(var list of all_cities_list) { %>
+
+					<ul id="<%=list.key%>">
+						<li>
+							<%=list.name%>
+						</li>
+						<li>
+							<%=list.state%>
+						</li>
+
+					</ul>
+
+					<%}%>
+
+			</div>
+		</div>
+
+
+
+	</div>
+	<script>
+
+		var valorNome = document.querySelector('.form-control')
+		var allList = document.querySelector('.all_list')
+
+		valorNome.addEventListener('input', event => {
+			var inputValue = event.target.value.trim().toLowerCase()
+
+			Array.from(allList.children)
+				.filter(todo => !todo.textContent.toLowerCase().includes(inputValue))
+				.forEach(todo => {
+					todo.classList.add('hidden')
+				})
+			Array.from(allList.children)
+				.filter(todo => todo.textContent.toLowerCase().includes(inputValue))
+				.forEach(todo => {
+					todo.classList.remove('hidden')
+				})
+		})
+
+	</script>
+	<style type="text/css">
+		* {
+			margin: 0;
+			padding: 0;
+			/* box-sizing: border-box; */
+		}
+
+		.hidden {
+			display: none;
+		}
+
+		body {
+			background-color: rgb(240, 242, 244);
+		}
+
+		.navbar {
+			display: flex;
+			width: 100%;
+			height: 60px;
+			background-color: #008000;
+			align-items: center;
+
+		}
+
+		.navbar-brand {
+			margin-left: 50px;
+			color: white;
+			text-decoration: none;
+		}
+
+		.container {
+			display: grid;
+			grid-template-columns: 2fr 1fr;
+			grid-template-rows: 1fr;
+			grid-template-areas: 'CCI CCL';
+			background-color: white;
+			margin: 50px;
+			border-radius: 10px;
+			min-height: 600px;
+
+			box-shadow:
+				2.8px 2.8px 2.2px rgba(0, 0, 0, 0.02),
+				6.7px 6.7px 5.3px rgba(0, 0, 0, 0.028),
+				12.5px 12.5px 10px rgba(0, 0, 0, 0.035),
+				22.3px 22.3px 17.9px rgba(0, 0, 0, 0.042),
+				41.8px 41.8px 33.4px rgba(0, 0, 0, 0.05),
+				100px 100px 80px rgba(0, 0, 0, 0.07);
+
+		}
+		
+ @media  (max-width: 900px) {
+  .container {
+	display: grid;
+	margin: 30px;
+			grid-template-columns:  1fr;
+			grid-template-rows: 0.5fr 1fr;
+			grid-template-areas: 'CCI' ' CCL';
+		
+}
+.container-children-list {
+			padding: 5px;
+		}
+
+li {
+			display: flex;
+			list-style: none;
+			letter-spacing: 1px;
+			font-size: 14px;
+			font-family: Arial, Helvetica, sans-serif;
+			box-sizing: border-box;
+			
+		}
+} 
+		.container-children-input {
+			display: grid;
+			grid-area: CCI;
+
+		}
+
+		.container-children-input>div {
+			display: grid;
+			justify-content: center;
+			margin: auto;
+			justify-items: center;
+			align-items: center;
+			align-content: space-between;
+
+		}
+
+		.container-children-input>div>.form-control {
+			display: grid;
+
+			width: 100%;
+			max-width: 600px;
+			
+			height: 50px;
+			border-radius: 5px;
+			padding: 5px;
+			border: 2px solid #008000;
+			outline: none;
+
+		}
+
+		.container-children-list {
+			display: grid;
+			grid-area: CCL;
+			padding: 10px;
+			justify-content: center;
+			background-color: rgb(226, 224, 224);
+			cursor: pointer;
+		}
+
+		ul {
+
+			display: flex;
+			width: 100%;
+			max-width: 400px;
+
+			justify-content: space-between;
+			align-content: space-between;
+			border-top: 1px solid gray;
+			padding: 5px;
+
+		}
+
+		li {
+			display: flex;
+			list-style: none;
+			letter-spacing: 1px;
+			/* font-size: 1.5rem; */
+			font-family: Arial, Helvetica, sans-serif;
+			
+		}
+	</style>
+</body>
+
+</html>

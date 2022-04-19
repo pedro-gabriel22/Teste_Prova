@@ -1,0 +1,62 @@
+		<!-- Search Validation Modal -->
+		<div id="bo-search-validation-dialog" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="bo-search-validation-dialog-title" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        	<h3 id="bo-search-validation-dialog-title" class="modal-title">Dados da pesquisa incompletos</h3>
+		      </div>
+		      <div class="modal-body">
+				<div id="bo-search-validation-message"></div>
+		      </div>
+		      <div class="modal-footer">
+		        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+		      </div>		      
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+        
+		<!-- Searching Modal -->
+		<div id="bo-searching-dialog" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="bo-searching-dialog-title" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+	        	<h3 id="bo-searching-dialog-title" class="modal-title">Pesquisando Horários</h3>
+		      </div>
+		      <div class="modal-body">
+				<img src="/images/waiting_animation.gif" width="220" height="33"/>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->
+        
+        <!-- Newsletter Modal -->
+		<div id="bo-newsletter-dialog" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+		  <div class="modal-dialog">
+		    <div class="modal-content">
+		      <div class="modal-header">
+		      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        	<h3 id="bo-newsletter-dialog-title" class="modal-title">Newsletter buscaOnibus</h3>
+	        	<p><strong>Cadastre-se</strong> e fique por dentro das <strong>novidades</strong> e <strong>promoções</strong>!</p>
+		      </div>
+		      <div class="modal-body">
+				<form role="form" id="bo-newsletter-form" novalidate>
+					<div class="bo-inputgroup">
+						<label for="bo-newsletter-email">E-mail:</label>
+						<input id="bo-newsletter-email" type="email" value="" name="email" class="required email form-control"> 
+					</div>
+					<div class="row">
+						<div class="col-md-12 col-sm-6 bo-inputgroup">
+							<label for="bo-newsletter-name">Nome:</label>
+							<input id="bo-newsletter-name" type="text" value="" name="name" class="form-control">
+						</div>
+					</div>
+					<div id="bo-subscribe-button" class="bo-inputgroup">
+						<input id="bo-newsletter-submit" type="submit" value="Cadastrar" class="btn btn-default btn-large btn-block">
+					</div>
+				</form>
+				<div id="bo-newsletter-notification-container"></div>
+		      </div>
+		    </div><!-- /.modal-content -->
+		  </div><!-- /.modal-dialog -->
+		</div><!-- /.modal -->

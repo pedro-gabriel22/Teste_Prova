@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+<!--
+
+VOCÊ QUE ESTÁ FUÇANDO O NOSSO HTML, VENHA TRABALHAR CONOSCO!!
+
+Estamos contratando:
+
+Desenvolvedor Front-End
+
+Descrição:
+-Integrar o front-end de novas funcionalidades e melhorias
+-Participar na análise de soluções de UX e UI
+-Participar no processo de otimização de performance Web
+-Participar na elaboração de materiais gráficos
+
+Conhecimentos:
+-HTML, CSS e Less
+-JavaScript + jQuery
+-Interfaces responsivas (Bootstrap ou outros)
+-Templates Django ou sistemas de templates similares
+-Pacote Adobe
+-Testes de front-end
+-Controle de versão
+-Inglês técnico
+
+Experiência:
+-Mínimo de um projeto profissional para web.
+
+Formação:
+-Superior completo em Ciências da Computação, Sistemas de Informação, Web Design, Design Gráfico ou cursos equivalentes.
+
+Benefícios adicionais:
+-Auxílio Alimentação
+-Vale-transporte
+-Seguro de Saúde e Dental
+-Ambiente descontraído no bairro da Lagoa da Conceição
+
+Carga horária: 
+-40 horas semanais - 2ª à 6ª feira
+
+Local: 
+-Lagoa da Conceição – Florianópolis/SC
+
+Interessados, enviar currículo, portfólio e pretensão salarial para: rh@buscaonibus.com.br, com o assunto: "Desenvolvedor Front-End #Curioso".
+
+-->
+{% include "includeHtmlHead.html" %}    
+{% block extraHtmlHead %}{% endblock %}
+{% include "includeContextData.html" %}
+{% include "includeAnalytics.html" %}
+{% include "includeTagManager.html" %}
+	</head>
+	<body class="bo-language-pt">
+{% include "includeFacebookSDK.html" %}
+{% include "includeHeader.html" %}
+{% block content %}{% endblock %}
+{% include "includeFooter.html" %}
+{% include "includeDialogs.html" %}
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="/site2013/js/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="/site2013/js/bootstrap.min.js"></script>
+    <script src="/site2013/js/bootstrap-datetimepicker.min.js"></script>
+    <script src="/site2013/js/jquery.boLocationSearch.js?v={{ base.constants.appVersion }}"></script>
+    <script src="/site2013/js/locations.js?v={{ base.constants.appVersion }}"></script>
+    <script src="/site2013/js/ui-buscaonibus.js?v={{ base.constants.appVersion }}"></script>
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+	<script async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/e974bdb9-2291-4a34-8ac9-47f7c083b6db-loader.js"></script>
+{% include "includeDFPManager.html" %}
+{% include "includeNewsletterRDStationScript.html" %}
+{% block extraScript %}{% endblock %}
+	</body>
+</html>

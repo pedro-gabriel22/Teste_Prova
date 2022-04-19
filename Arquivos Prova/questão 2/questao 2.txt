@@ -1,0 +1,13 @@
+
+
+
+
+
+
+
+base.all_cities_list -> array
+cada item desse array possui os seguintes atributos:
+- key -> String
+- nome -> String
+- state -> String
+- visible -> Boolean
